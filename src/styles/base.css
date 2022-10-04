@@ -1,0 +1,33 @@
+:root {
+  /* colors */
+  --clr-primary-light: hsl(238, 22%, 44%);
+  --clr-primary-dark: hsl(243, 87%, 12%);
+  --clr-accent-light: hsl(224, 93%, 58%);
+  --clr-accent-dark: hsl(170, 45%, 43%);
+  --clr-neutral-light: hsl(240, 80%, 98%);
+  --clr-neutral-dark: hsl(0, 0%, 75%);
+
+  /* font family */
+  --ff-primary: 'Raleway', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  
+  /* font weight */
+  --fw-bold: 700;
+  --fw-regular: 400;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+}
+
+.container {
+  --max-width: 1240px;
+  --padding-inline: 2rem;
+  --padding-block: 2rem;
+
+  width: min(var(--max-width), 100% - var(--padding-inline) * 2);
+  padding-block: var(--padding-block);
+  margin-inline: auto;
+}
