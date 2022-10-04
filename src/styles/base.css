@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--ff-secondary);
   font-size: 1.125rem;
   font-weight: var(--fw-regular);
 }
@@ -30,4 +30,14 @@ body {
   width: min(var(--max-width), 100% - var(--padding-inline) * 2);
   padding-block: var(--padding-block);
   margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
 }
