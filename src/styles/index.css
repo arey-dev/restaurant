@@ -14,7 +14,7 @@ h1 {
   align-self: center;
 }
 
-.btn-container {
+.nav {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
