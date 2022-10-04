@@ -16,9 +16,12 @@ const header = () => {
   header_cont.classList.add('container');
   header_cont.classList.add('grid');
   header_btn_cont.classList.add('btn-container');
+  header_btn1.classList.add('button');
+  header_btn2.classList.add('button');
+  header_btn3.classList.add('button');
 
   // header contents
-  header_h1.textContent = "Elise's Stomach";
+  header_h1.textContent = "Elise Cravings";
   header_btn1.textContent = 'Home';
   header_btn2.textContent = 'Menu';
   header_btn3.textContent = 'Contact';
