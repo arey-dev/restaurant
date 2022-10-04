@@ -5,7 +5,7 @@
   --clr-accent-light: hsl(224, 93%, 58%);
   --clr-accent-dark: hsl(170, 45%, 43%);
   --clr-neutral-light: hsl(240, 80%, 98%);
-  --clr-neutral-dark: hsl(0, 0%, 75%);
+  --clr-neutral-dark: hsl(0, 0%, 75%, 0.5);
 
   /* font family */
   --ff-primary: 'Raleway', sans-serif;
@@ -18,7 +18,7 @@
 
 body {
   font-family: var(--ff-secondary);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: var(--fw-regular);
 }
 
@@ -38,6 +38,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
 }
