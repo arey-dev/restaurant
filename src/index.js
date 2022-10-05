@@ -50,28 +50,15 @@ const home = () => {
   const about_fig_img = document.createElement('img');
   const about_fig_cap = document.createElement('figcaption');
 
-  // const staff = document.createElement('section');
-  // const staff_cont = document.createElement('div');
-  // const staff_h2 = document.createElement('h2');
-  // const staff_art1 = document.createElement('article');
-  // const staff_art2 = document.createElement('article');
-
   // add classes and id
   about.setAttribute('id', 'about');
   about_cont.className = 'container container--about';  
-
-  // staff_cont.classList.add('continaer');
-  // staff_art1.classList.add('staff_card');
-  // staff_art2.classList.add('staff_card');
 
   // add contents to elements
   about_h2.textContent = 'About';
   about_p.textContent = 'Elise Cravings is a restaurant that will satisfy your cravings. We have a wide variety of food choices for people with different tastes. Aside from the delicious food, Elise Cravings have a nice ambience that will make you enjoy every bite!';
   about_fig_img.src = about_img;
   about_fig_cap.textContent = 'Elise Cravings on a typical busy day.';
-
-
-  // staff_h2.textContent = 'Staff';
 
   // append elements
   about_fig.append(about_fig_img);
@@ -83,6 +70,8 @@ const home = () => {
 
   // push elements to array
   elems.push(about);
+
+  // add staff section
 
   return elems;
 }
