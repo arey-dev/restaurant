@@ -1,9 +1,11 @@
 #about {
+  display: none;
   text-align: center;
 }
 
 .container--about {
   --max-width: 900px;
+  --padding-block: 1rem;
   margin-bottom: 1rem;
 }
 
