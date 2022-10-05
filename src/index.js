@@ -2,8 +2,9 @@ import './styles/reset.css';
 import './styles/base.css';
 import './styles/index.css';
 import './styles/home.css';
+import './styles/menu.css';
 // import home from './scripts/home.js';
-import menu from './scripts/menu.js';
+// import menu from './scripts/menu.js';
 
 const header = () => {
   // create header elements
@@ -43,7 +44,7 @@ const header = () => {
 const main = () => {
   const main = document.createElement('main');
   // main.append(...home());
-  main.append(menu());
+  // main.append(menu());
 
   return main;
 };
