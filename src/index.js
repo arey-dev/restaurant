@@ -8,7 +8,7 @@ import home from './scripts/home.js';
 import menu from './scripts/menu.js';
 import contacts from './scripts/contact.js';
 
-const header = () => {
+const Header = () => {
   // create header elements
   const header = document.createElement('header');
   const header_cont = document.createElement('div');
@@ -26,11 +26,16 @@ const header = () => {
   nav_btn2.classList.add('button');
   nav_btn3.classList.add('button');
 
+  // add attributes
+  nav_btn1.setAttribute('data-section', 'home');
+  nav_btn2.setAttribute('data-section', 'menu');
+  nav_btn3.setAttribute('data-section', 'contacts');
+  
   // header contents
   header_h1.textContent = "Elise Cravings";
   nav_btn1.textContent = 'Home';
   nav_btn2.textContent = 'Menu';
-  nav_btn3.textContent = 'Contact';
+  nav_btn3.textContent = 'Contacts';
 
   // append elements
   header_nav.append(nav_btn1);
@@ -40,17 +45,61 @@ const header = () => {
   header_cont.append(header_nav);
   header.append(header_cont);
 
-  return header;
+  const getHeaderElem = () => header;
+  const getNav = () => header_nav;
+
+  return {
+    getHeaderElem,
+    getNav,
+  }
 };
+
+const homeSection = home();
+const menuSection = menu();
+const contactSection = contacts();
 
 const main = () => {
   const main = document.createElement('main');
-  main.append(home());
-  main.append(menu());
-  main.append(contacts());
+  main.append(homeSection);
+  main.append(menuSection);
+  main.append(contactSection);
 
   return main;
 };
 
-content.append(header());
+const header = Header();
+
+content.append(header.getHeaderElem());
 content.append(main());
+
+const headerNav = header.getNav();
+const navButtons = headerNav.querySelectorAll('button');
+
+
+const setDisplayNone = () => {
+  homeSection.style.display = 'none';
+  menuSection.style.display = 'none';
+  contactSection.style.display = 'none';
+};
+
+headerNav.onclick = (event) => {
+  const button = event.target;
+  const buttonAttr = button.getAttribute('data-section');
+
+  if(button.tagName !== 'BUTTON') return;
+
+  if(buttonAttr === 'home') {
+    setDisplayNone();
+    homeSection.style.display = 'block';
+  }
+
+  if(buttonAttr === 'menu') {
+    setDisplayNone();
+    menuSection.style.display = 'block';
+  }
+
+  if(buttonAttr === 'contacts') {
+    setDisplayNone();
+    contactSection.style.display = 'block';
+  }
+};
