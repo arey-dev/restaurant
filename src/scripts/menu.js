@@ -1,11 +1,12 @@
-import menu_noodles from '../images/menu_noodles.png';
-import menu_tacos from '../images/menu_tacos.png';
-import menu_pasta from '../images/menu_pasta.png';
-import menu_ribs from '../images/menu_ribs.png';
+import menu_noodles from '../images/menu-noodles.png';
+import menu_tacos from '../images/menu-tacos.png';
+import menu_pasta from '../images/menu-pasta.png';
+import menu_ribs from '../images/menu-ribs.png';
 
 const menu = () => {
   // create elements
   const menu = document.createElement('section');
+  menu.setAttribute('id', 'menu');
 
   const menu_cont = document.createElement('div');
   menu_cont.className = 'container container--menu';
@@ -92,9 +93,9 @@ const menu = () => {
   menu_grid.append(grid_row4);
 
   // append all menu elements
+  menu_cont.append(menu_h2);
+  menu_cont.append(menu_grid);
   menu.append(menu_cont);
-  menu.append(menu_h2);
-  menu.append(menu_grid)
 
   return menu;
 };
