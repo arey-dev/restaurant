@@ -37,31 +37,3 @@ section .container h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-
-/* home */
-#about {
-  text-align: center;
-}
-
-.container--about {
-  --max-width: 900px;
-}
-
-.container--about p {
-  margin-bottom: 1rem;
-}
-
-.container--about figure {
-  max-width: 42rem;
-  margin-inline: auto;
-}
-
-.container--about figure img {
-  margin-bottom: 0.5rem;
-}
-
-.container--about figcaption {
-  font-style: italic;
-}
-
-
