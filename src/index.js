@@ -54,10 +54,14 @@ const Header = () => {
   }
 };
 
+// cache dom 
+const header = Header();
+const headerNav = header.getNav();
 const homeSection = home();
 const menuSection = menu();
 const contactSection = contacts();
 
+// create main elem
 const main = () => {
   const main = document.createElement('main');
   main.append(homeSection);
@@ -67,21 +71,20 @@ const main = () => {
   return main;
 };
 
-const header = Header();
-
+// append to content
 content.append(header.getHeaderElem());
 content.append(main());
 
-const headerNav = header.getNav();
-const navButtons = headerNav.querySelectorAll('button');
-
-
-const setDisplayNone = () => {
+// helper function for event handler
+// hides the section from the ui
+const hideSection = () => {
   homeSection.style.display = 'none';
   menuSection.style.display = 'none';
   contactSection.style.display = 'none';
 };
 
+// adds a listener to each button
+// Shows the selected section on the ui
 headerNav.onclick = (event) => {
   const button = event.target;
   const buttonAttr = button.getAttribute('data-section');
@@ -89,17 +92,17 @@ headerNav.onclick = (event) => {
   if(button.tagName !== 'BUTTON') return;
 
   if(buttonAttr === 'home') {
-    setDisplayNone();
+    hideSection();
     homeSection.style.display = 'block';
   }
 
   if(buttonAttr === 'menu') {
-    setDisplayNone();
+    hideSection();
     menuSection.style.display = 'block';
   }
 
   if(buttonAttr === 'contacts') {
-    setDisplayNone();
+    hideSection();
     contactSection.style.display = 'block';
   }
 };
