@@ -4,6 +4,7 @@
 
 .container--about {
   --max-width: 900px;
+  margin-bottom: 1rem;
 }
 
 .container--about p {
