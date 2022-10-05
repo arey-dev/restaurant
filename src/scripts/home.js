@@ -1,7 +1,6 @@
 import about_img from '../images/about_img.jpg';
 
 const home = () => {
-  const elems = [];
 
   // create home elements
   const about = document.createElement('section');
@@ -30,12 +29,7 @@ const home = () => {
   about_cont.append(about_fig);
   about.append(about_cont);
 
-  // push elements to array
-  elems.push(about);
-
-  // add staff section
-
-  return elems;
+  return about;
 }
 
 export default home;
