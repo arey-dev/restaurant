@@ -1,7 +1,7 @@
 
 const contacts = () => {
   const contacts = document.createElement('section');
-  contact.setAttribute('id', 'contacts')
+  contacts.setAttribute('id', 'contacts')
 
   // container
   const contacts_cont = document.createElement('div');
@@ -11,13 +11,13 @@ const contacts = () => {
   contacts_h2.textContent = 'Contacts';
 
   const contacts_address = document.createElement('address');
-  contacts_address.innerHTML = '<span>Contact Us</span><a href="#">(311) 555-2368</a><span>Message Us</span><a href="#">jim@rock.com</a><span>Visit Us</span><span>192 S 500 E <br/> Fork, Utah <br/> US</span>';
+  contacts_address.innerHTML = '<span>Call Us</span><a href="#">(311) 555-2368</a><span>Message Us</span><a href="#">jim@rock.com</a><span>Visit Us</span><a href="#">192 S 500 E <br/> Fork, Utah <br/> US</a>';
 
   contacts_cont.append(contacts_h2);
   contacts_cont.append(contacts_address);
   contacts.append(contacts_cont);
   
-  return contacts
+  return contacts;
 };
 
 export default contacts;
